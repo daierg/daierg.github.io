@@ -4229,6 +4229,10 @@ body.is-menu-visible #menu .inner {
 	display: block;
 	transition: 1s;
 }
+.wx-ewm:hover{
+	border-bottom-color: transparent;
+    color: #9bf1ff !important;
+}
 
 .pingfen-3>section {
 	float: left;
