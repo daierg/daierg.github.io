@@ -4251,4 +4251,7 @@ body.is-menu-visible #menu .inner {
 	.contact-method{
 		margin: 0;
 	}
+	#banner{
+		background-size: cover;
+	}
 }
