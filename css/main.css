@@ -3596,7 +3596,7 @@ body.is-loading #header.alt {
 @media screen and (max-width: 480px) {
 
 	#header .logo span {
-		display: none;
+		
 	}
 
 	#header nav a[href="#menu"] {
@@ -3628,7 +3628,7 @@ body.is-loading #header.alt {
 	-webkit-align-items: center;
 	-ms-align-items: center;
 	align-items: center;
-	background-image: url("../img/banner.jpg");
+	background-image: url("https://daierg-1305422979.cos.ap-beijing.myqcloud.com/uPic/banner-1.jpg");
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: -ms-flex;
@@ -3637,7 +3637,7 @@ body.is-loading #header.alt {
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 100% 700px;
 	border-bottom: 0 !important;
 	cursor: default;
 	height: 60vh;
@@ -3939,7 +3939,7 @@ body.is-loading #banner>.inner {
 	}
 
 	#contact>.inner>.split>* {
-		padding: 3em 0 1em 0;
+		padding: 10px 0;
 	}
 
 	#contact>.inner>.split> :first-child:before {
@@ -3951,7 +3951,7 @@ body.is-loading #banner>.inner {
 @media screen and (max-width: 736px) {
 
 	#contact>.inner> :nth-child(2n - 1) {
-		padding: 3em 0 1em 0;
+		padding: 20px 0;
 	}
 
 }
@@ -4237,4 +4237,18 @@ body.is-menu-visible #menu .inner {
 .pingfen-3>section {
 	float: left;
 	width: calc(100%/3);
+}
+
+@media screen and (max-width: 768px){
+	.pingfen-3>section{
+		float: none;
+		width: auto;
+	}
+	.contact-method .icon{
+		width: 32px;
+		height: 32px;
+	}
+	.contact-method{
+		margin: 0;
+	}
 }
