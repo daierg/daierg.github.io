@@ -4272,7 +4272,7 @@ body.is-menu-visible #menu .inner {
 }
 .Contentbox img{
 	display: block;
-	width: 1200px;
+	width: 100%;
 }
 li{
 	list-style: none;
@@ -4367,4 +4367,21 @@ li{
 .icon-bottom path{
 	transition: background-color 0.2s ease-in-out;
 	cursor: pointer;
+}
+@media screen and (max-width: 768px){
+	.visit{
+		right: 20px;
+		bottom: 100px;
+	}
+	.gotop{
+		right: 20px;
+		bottom: 30px;
+	}
+	.detail{
+		width: 100%;
+		margin:0 auto;
+	}
+	.Tab ul{
+		margin: 20px auto 30px;
+	}
 }
