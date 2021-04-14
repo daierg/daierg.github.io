@@ -3,6 +3,11 @@
 
 /* Reset */
 
+#loadingDiv>div {
+    background-image: url(https://daierg-1305422979.cos.ap-beijing.myqcloud.com/uPic/loading_dog1.gif);
+    background-size: 100%!important;
+}
+
 html,
 body,
 div,
