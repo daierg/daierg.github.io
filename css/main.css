@@ -4,7 +4,7 @@
 /* Reset */
 
 #loadingDiv>div {
-    background-image: url(https://daierg-1305422979.cos.ap-beijing.myqcloud.com/uPic/loading_dog1.gif);
+    background-image: url(https://raw.githubusercontent.com/daierg/picbed/master/uPic/loading_dog1.gif);
     background-size: 100%!important;
 }
 
@@ -3633,7 +3633,7 @@ body.is-loading #header.alt {
 	-webkit-align-items: center;
 	-ms-align-items: center;
 	align-items: center;
-	background-image: url("https://daierg-1305422979.cos.ap-beijing.myqcloud.com/uPic/banner-1.jpg");
+	background-image: url("https://raw.githubusercontent.com/daierg/picbed/master/uPic/banner-1.jpg");
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: -ms-flex;
