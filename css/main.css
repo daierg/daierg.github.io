@@ -4497,3 +4497,7 @@ li{
 .list_one:hover span{
 	margin-left: 60px;
 }
+#work_category .this{
+	background: #fff;
+	color: #242943;
+}
