@@ -4264,6 +4264,20 @@ body.is-menu-visible #menu .inner {
 		padding-left: 20px!important;
 		padding-right: 20px!important;
 	}
+	.list_con img{
+		width: 100%!important;
+	}
+	.list_one:hover span{
+		margin-left:0!important ;
+	}
+	.list_con span{
+		width: 100%!important;
+		text-align: center!important;
+		margin-left:0!important;
+	}
+	#work_category ul>li>a{
+		font-size: 14px!important;
+	}
 }
 .detail{
 	width: 1200px;
@@ -4397,18 +4411,20 @@ li{
 	margin-top: 30px;
 }
 .centerBox{
-	width: 1200px;
+	width: 100%;
+	max-width: 1200px;
 	margin: 0 auto;
 	overflow: hidden;
 }
 #work_category ul{
-	width: 800px;
+	width: 100%;
+	max-width: 800px;
 	margin: 0 auto;
 	padding: 0;
 	overflow: hidden;
 }
 #work_category ul>li{
-	width: 180px;
+	width: calc(25% - 20px);
 	margin: 0 10px;
 	float: left;
 }
