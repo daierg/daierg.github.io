@@ -1,36 +1,35 @@
 //页面加载loading代码
-	//获取浏览器页面可见高度和宽度
-	var _PageHeight = document.documentElement.clientHeight,
-		_PageWidth = document.documentElement.clientWidth;
-	//计算loading框距离顶部和左部的距离（loading框的宽度为215px，高度为61px）
-	var _LoadingTop = _PageHeight > 61 ? (_PageHeight - 61) / 2 : 0,
-		_LoadingLeft = _PageWidth > 215 ? (_PageWidth - 215) / 2 : 0;
-	//在页面未加载完毕之前显示的loading Html自定义内容
-	var _LoadingHtml = '<div id="loadingDiv" style="position:fixed;left:0;width:100%;height:' + _PageHeight +
-		'px;top:0;background:#242943;opacity:1;filter:alpha(opacity=80);z-index:999999;"><div style="position: absolute; cursor: wait; left:calc(50% - 200px); top:calc(50% - 200px); width: 400px; height: 400px; line-height: 0; padding-left: 0; padding-right: 0; border: none; color: #242943; font-family:\'Microsoft YaHei\';"></div></div>';
-	//呈现loading效果
-	document.write(_LoadingHtml);
+//获取浏览器页面可见高度和宽度
+var _PageHeight = document.documentElement.clientHeight,
+	_PageWidth = document.documentElement.clientWidth;
+//计算loading框距离顶部和左部的距离（loading框的宽度为215px，高度为61px）
+var _LoadingTop = _PageHeight > 61 ? (_PageHeight - 61) / 2 : 0,
+	_LoadingLeft = _PageWidth > 215 ? (_PageWidth - 215) / 2 : 0;
+//在页面未加载完毕之前显示的loading Html自定义内容
+var _LoadingHtml = '<div id="loadingDiv" style="position:fixed;left:0;width:100%;height:' + _PageHeight +
+	'px;top:0;background:#242943;opacity:1;filter:alpha(opacity=80);z-index:999999;"><div style="position: absolute; cursor: wait; left:calc(50% - 200px); top:calc(50% - 200px); width: 400px; height: 400px; line-height: 0; padding-left: 0; padding-right: 0; border: none; color: #242943; font-family:\'Microsoft YaHei\';"></div></div>';
+//呈现loading效果
+document.write(_LoadingHtml);
 
-	//window.onload = function () {
-	//    var loadingMask = document.getElementById('loadingDiv');
-	//    loadingMask.parentNode.removeChild(loadingMask);
-	//};
+//window.onload = function () {
+//    var loadingMask = document.getElementById('loadingDiv');
+//    loadingMask.parentNode.removeChild(loadingMask);
+//};
+//监听加载状态改变
+document.onreadystatechange = completeLoading;
 
-	//监听加载状态改变
-	document.onreadystatechange = completeLoading;
-
-	//加载状态为complete时移除loading效果
-	function completeLoading() {
-		if (document.readyState == "complete") {
-			var loadingMask = document.getElementById('loadingDiv');
-			loadingMask.parentNode.removeChild(loadingMask);
-		}
+//加载状态为complete时移除loading效果
+function completeLoading() {
+	if (document.readyState == "complete") {
+		var loadingMask = document.getElementById('loadingDiv');
+		loadingMask.parentNode.removeChild(loadingMask);
 	}
+}
 //页面加载loading代码结束
 
 //蜘蛛丝
 function async_load() {
-           
+
 	i.scrolling = "no";
 	i.frameborder = "0";
 	i.border = "0";
@@ -40,11 +39,15 @@ function async_load() {
 	document.getElementById("banner").appendChild(i);
 }
 
-if (window.addEventListener) {window.addEventListener("load", async_load, false);}
-else if (window.attachEvent) {window.attachEvent("onload", async_load);}
-else {window.onload = async_load;}
+if (window.addEventListener) {
+	window.addEventListener("load", async_load, false);
+} else if (window.attachEvent) {
+	window.attachEvent("onload", async_load);
+} else {
+	window.onload = async_load;
+}
 
-! function() {
+! function () {
 	//封装方法，压缩之后减少文件大小
 	function get_attribute(node, attr, default_value) {
 		return node.getAttribute(attr) || default_value;
@@ -68,8 +71,8 @@ else {window.onload = async_load;}
 	}
 	//设置canvas的高宽
 	function set_canvas_size() {
-		canvas_width = the_canvas.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, 
-		canvas_height = the_canvas.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+		canvas_width = the_canvas.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+			canvas_height = the_canvas.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 	}
 
 	//绘制过程
@@ -78,27 +81,27 @@ else {window.onload = async_load;}
 		//随机的线条和当前位置联合数组
 		var e, i, d, x_dist, y_dist, dist; //临时节点
 		//遍历处理每一个点
-		random_lines.forEach(function(r, idx) {
-			r.x += r.xa, 
-			r.y += r.ya, //移动
-			r.xa *= r.x > canvas_width || r.x < 0 ? -1 : 1, 
-			r.ya *= r.y > canvas_height || r.y < 0 ? -1 : 1, //碰到边界，反向反弹
-			context.fillRect(r.x - 0.5, r.y - 0.5, 1, 1); //绘制一个宽高为1的点
+		random_lines.forEach(function (r, idx) {
+			r.x += r.xa,
+				r.y += r.ya, //移动
+				r.xa *= r.x > canvas_width || r.x < 0 ? -1 : 1,
+				r.ya *= r.y > canvas_height || r.y < 0 ? -1 : 1, //碰到边界，反向反弹
+				context.fillRect(r.x - 0.5, r.y - 0.5, 1, 1); //绘制一个宽高为1的点
 			//从下一个点开始
 			for (i = idx + 1; i < all_array.length; i++) {
 				e = all_array[i];
 				//不是当前点
 				if (null !== e.x && null !== e.y) {
-						x_dist = r.x - e.x, //x轴距离 l
+					x_dist = r.x - e.x, //x轴距离 l
 						y_dist = r.y - e.y, //y轴距离 n
 						dist = x_dist * x_dist + y_dist * y_dist; //总距离, m
 					dist < e.max && (e === current_point && dist >= e.max / 2 && (r.x -= 0.03 * x_dist, r.y -= 0.03 * y_dist), //靠近的时候加速
-						d = (e.max - dist) / e.max, 
-						context.beginPath(), 
-						context.lineWidth = d / 2, 
-						context.strokeStyle = "rgba(" + config.c + "," + (d + 0.2) + ")", 
-						context.moveTo(r.x, r.y), 
-						context.lineTo(e.x, e.y), 
+						d = (e.max - dist) / e.max,
+						context.beginPath(),
+						context.lineWidth = d / 2,
+						context.strokeStyle = "rgba(" + config.c + "," + (d + 0.2) + ")",
+						context.moveTo(r.x, r.y),
+						context.lineTo(e.x, e.y),
 						context.stroke());
 				}
 			}
@@ -108,10 +111,12 @@ else {window.onload = async_load;}
 	var the_canvas = document.createElement("canvas"), //画布
 		config = get_config_option(), //配置
 		canvas_id = "c_n" + config.l, //canvas id
-		context = the_canvas.getContext("2d"), canvas_width, canvas_height, 
-		frame_func = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(func) {
+		context = the_canvas.getContext("2d"),
+		canvas_width, canvas_height,
+		frame_func = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (func) {
 			window.setTimeout(func, 1000 / 45);
-		}, random = Math.random, 
+		},
+		random = Math.random,
 		current_point = {
 			x: null, //当前鼠标x
 			y: null, //当前鼠标y
@@ -125,9 +130,9 @@ else {window.onload = async_load;}
 
 	set_canvas_size(), window.onresize = set_canvas_size;
 	//当时鼠标位置存储，离开的时候，释放当前位置信息
-	window.onmousemove = function(e) {
+	window.onmousemove = function (e) {
 		e = e || window.event, current_point.x = e.clientX, current_point.y = e.clientY;
-	}, window.onmouseout = function() {
+	}, window.onmouseout = function () {
 		current_point.x = null, current_point.y = null;
 	};
 	//随机生成config.n条线位置信息
@@ -146,38 +151,39 @@ else {window.onload = async_load;}
 	}
 	all_array = random_lines.concat([current_point]);
 	//0.1秒后绘制
-	setTimeout(function() {
+	setTimeout(function () {
 		draw_canvas();
 	}, 100);
 }();
 //蜘蛛丝结束
 
 //返回顶部首屏隐藏  
-    $(function () {
-        showScroll();
-        function showScroll() {
-            $(window).scroll(function () {
-                var scrollValue = $(window).scrollTop();
-                	scrollValue > 800 ? $('.gotop').fadeIn() : $('.gotop').fadeOut();
-            });
-                $('#scroll').click(function () {
-                    $("html,body").animate({
-                        scrollTop: 0
-                    }, 500);
-                });
-            }
-        })   
+$(function () {
+	showScroll();
+
+	function showScroll() {
+		$(window).scroll(function () {
+			var scrollValue = $(window).scrollTop();
+			scrollValue > 800 ? $('.gotop').fadeIn() : $('.gotop').fadeOut();
+		});
+		$('#scroll').click(function () {
+			$("html,body").animate({
+				scrollTop: 0
+			}, 500);
+		});
+	}
+})
 //返回顶部首屏隐藏结束
 
 //标签切换代码
-	function setTab(name, cursel, n) {
-		for (i = 1; i <= n; i++) {
-			var menu = document.getElementById(name + i);
-			var con = document.getElementById("con_" + name + "_" + i);
-			menu.className = i == cursel ? "select" : "";
-			con.style.display = i == cursel ? "block" : "none";
-		}
+function setTab(name, cursel, n) {
+	for (i = 1; i <= n; i++) {
+		var menu = document.getElementById(name + i);
+		var con = document.getElementById("con_" + name + "_" + i);
+		menu.className = i == cursel ? "select" : "";
+		con.style.display = i == cursel ? "block" : "none";
 	}
+}
 //标签切换代码结束
 
 (function ($) {
