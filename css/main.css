@@ -4307,7 +4307,8 @@ li{
 	display: block;
 	margin: 50px auto;
 	padding: 0;
-	width: 287px;
+	width: 100%;
+	text-align: center;
 }
 .Tab ul>li{
 	display: inline-block;
@@ -4538,4 +4539,134 @@ li{
 .lspng>img{
 	width: 600px;
 	height: auto;
+}
+.bloglist{
+	width: 100%;
+	overflow: hidden;
+	margin: 0!important;
+}
+.Contentbox .bloglist li{
+	width: 100%;
+	height: 120px;
+	margin: 30px 0;
+	border-style: dashed;
+	border-left: none;
+	border-right: none;
+	padding: 20px 70px;
+	text-align: left;
+	cursor: auto;
+}
+.Contentbox .bloglist li:hover{
+	background:none;
+	color:inherit;
+}
+.Contentbox .bloglist li h1{
+	margin: 0;
+	font-size: 22px;
+}
+.Contentbox .bloglist li p{
+	margin: 0;
+	font-size: 14px;
+}
+#blogdetailbox{
+	max-width: 100%;
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+#blogdetailbox>h1{
+	font-size: 36px;
+	text-align: center;
+	margin-top: 30px;
+}
+#blogdetailbox>h2{
+	font-size: 20px;
+	margin: 0;
+}
+#blogdetailbox>h3,#blogdetailbox>h4,#blogdetailbox>h5{
+	margin-bottom:10px;
+}
+#blogdetailbox>ul{
+	overflow: hidden;
+}
+#blogdetailbox>ul>li{
+	width: 50%;
+	float: left;
+}
+.theone{
+	margin-left: 10px;
+	width: 100%;
+	border: none;
+	display: inline-block;
+	font-size: 20px;
+}
+.thetwo{
+	margin-left: 50px;
+	border: none;
+	display: block;
+	font-size: 18px;
+}
+.thethree{
+	margin-left: 70px;
+	border: none;
+	display: block;
+	font-size: 16px;
+}
+#blogdetailbox>.start{
+	margin-top: 50px;
+}
+.border{
+	height: 1px;
+	width: 100%;
+	background-color: #fff;
+	margin-top: 30px;
+}
+#blogdetailbox>h3{
+	font-size: 24px;
+	font-weight: normal;
+}
+#blogdetailbox>h4{
+	font-size: 20px;
+	font-weight: normal;
+}
+#blogdetailbox>h5{
+	font-size: 18px;
+	font-weight: normal;
+}
+#blogdetailbox>h6{
+	font-weight: normal;
+	border: 1px solid #fff;
+	display: inline-block;
+	padding: 4px 10px;
+}
+.explain{
+	width: 100%;
+	height: auto;
+	padding: 20px 30px;
+	border-left: 8px solid #d8d1e0;
+	background-color: #ebeef2;
+	color: rgba(0,0,0,1);
+	font-size: 14px;
+	line-height: 30px;
+	margin-bottom: 10px;
+}
+#blogdetailbox th{
+	font-weight: 700;
+	font-size: 14px;
+    color: #fff;
+    line-height: 22px;
+    border: 2px solid #383c55;
+    padding: 8px;
+    word-break: normal!important;
+    vertical-align: middle;
+}
+#blogdetailbox td{
+	font-weight: normal;
+	font-size: 14px;
+    color: #fff;
+    line-height: 22px;
+    border: 2px solid #383c55;
+    padding: 8px;
+    word-break: normal!important;
+    vertical-align: middle;
 }

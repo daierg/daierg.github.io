@@ -1,11 +1,12 @@
 <!DOCTYPE HTML>
 <html lang="en-us">
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="author" content="李斯">
-    <title>网页设计列表 - Li Si ' Work</title>
+    <title>Blog列表 - Li Si ' Work</title>
     <!-- Stylesheets -->
     <link rel="stylesheet" href="//daierg.github.io/css/main.css" />
 
@@ -15,7 +16,7 @@
     <link rel="icon" type="image/x-icon" href="//daierg.github.io/favicon.ico">
 
     <!-- 本地预览用代码 -->
-    <!-- <link rel="stylesheet" href="css/main.css" />
+    <!-- <link rel="stylesheet" href="css/main.css"/>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.scrolly.min.js"></script>
     <script src="js/jquery.scrollex.min.js"></script>
@@ -27,7 +28,10 @@
 </head>
 
 <body>
+
+    <!-- Wrapper -->
     <div id="wrapper">
+
         <!-- Header -->
         <header id="header" class="alt">
             <a href="//daierg.github.io" class="logo"><strong>lisi's</strong> <span>个人作品集</span></a>
@@ -51,78 +55,64 @@
                 <li><a href="//daierg.github.io/cv.html" class="button fit">简历</a></li>
             </ul>
         </nav>
-
         <!-- banner -->
-        <img src="https://gitee.com/daierg/picbed/raw/master/uPic/xx_banner.png" alt="">
+        <img src="https://gitee.com/daierg/picbed/raw/master/uPic/blog_banner.png" alt="">
 
-        <!-- list -->
-        <div id="work_category" class="centerBox">
-            <ul>
-                <li><a href="#" class="this">网页设计</a></li>
-                <li><a href="//daierg.github.io/work-dianshang-list.html">电商设计</a></li>
-                <li><a href="//daierg.github.io/work-ui-list.html">UI设计</a></li>
-                <li><a href="//daierg.github.io/work-pingmian-list.html">平面设计</a></li>
-            </ul>
-        </div>
-        <div id="work_list" class="centerBox">
-            <div class="list_con">
-                <div class="Contentbox">
-                    <div id="con_menu_1" class="select" style="display: block;">
-                        <div class="list_one">
-                            <a href="//daierg.github.io/work-html-02.html">
-                                <img src="https://gitee.com/daierg/picbed/raw/master/uPic/hometop_jt.jpg" alt="">
-                            </a>
-                            <span>
-                                <a href="//daierg.github.io/work-html-02.html">
-                                    <h1>个人博客</h1>
-                                </a>
-                                <p>我的个人博客&作品集</p>
-                            </span>
-                        </div>
-                        <div class="list_one">
-                            <a href="//daierg.github.io/work-html-01.html">
-                                <img src="https://gitee.com/daierg/picbed/raw/master/uPic/html_img1.jpg"
-                                    alt="">
-                            </a>
-                            <span>
-                                <a href="//daierg.github.io/work-html-01.html">
-                                    <h1>饮品网站模板</h1>
-                                </a>
-                                <p>这是一个网站模板</p>
-                            </span>
-                        </div>                       
-                        <div class="list_one">
-                            <a href="#">
-                                <img src="https://gitee.com/daierg/picbed/raw/master/uPic/img.jpg" alt="">
-                            </a>
-                            <span>
-                                <a href="#">
-                                    <h1>标题3························</h1>
-                                </a>
-                                <p>介绍3········································</p>
-                            </span>
-                        </div>
-                        <div class="list_one">
-                            <a href="#">
-                                <img src="https://gitee.com/daierg/picbed/raw/master/uPic/img.jpg" alt="">
-                            </a>
-                            <span>
-                                <a href="#">
-                                    <h1>标题4························</h1>
-                                </a>
-                                <p>介绍4········································</p>
-                            </span>
-                        </div>
-                    </div>
-                    <div id="con_menu_2" style="display: none;">
-                        第二页录入中......
-                    </div>
-                </div>
+        <a href="javascript:;" id="scroll" class="gotop" sty><svg t="1617474090702" class="icon" viewBox="0 0 1819 1024"
+                version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2037" width="32" height="32">
+                <path
+                    d="M31.507692 986.865934v5.626374a112.527473 112.527473 0 0 0 154.162638 0l723.551648-719.05055 719.050549 719.05055a112.527473 112.527473 0 0 0 154.162638 0l5.626373-5.626374a112.527473 112.527473 0 0 0 0-154.162637L986.865934 31.507692a112.527473 112.527473 0 0 0-154.162637 0L31.507692 832.703297a112.527473 112.527473 0 0 0 0 154.162637z"
+                    fill="#ffffff" p-id="2038"></path>
+            </svg></a>
+        <div class="detail">
+            <div class="Tab">
                 <div class="Menubox">
                     <ul>
-                        <li id="menu1" onclick="setTab('menu',1,2)" class="select">1</li>
-                        <li id="menu2" onclick="setTab('menu',2,2)">2</li>
+                        <li id="menu1" onclick="setTab('menu',1,2)" class="select">学习笔记</li>
+                        <li id="menu2" onclick="setTab('menu',2,2)">未命名</li>
                     </ul>
+                </div>
+                <div class="Contentbox">
+                    <div id="con_menu_1" class="select" style="display: block;">
+                        <ul class="bloglist">
+                            <li>
+                                <a href="//daierg.github.io/blog-001.html"><h1>网页学习HTML+CSS笔记</h1></a>
+                                <p>HTML5+CSS3复习总结</p>
+                            </li>
+                            <li>
+                                <a href="#"><h1>标题2</h1></a>
+                                <p>介绍2</p>
+                            </li>
+                            <li>
+                                <a href="#"><h1>标题3</h1></a>
+                                <p>介绍3</p>
+                            </li>
+                            <li>
+                                <a href="#"><h1>标题4</h1></a>
+                                <p>介绍4</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="con_menu_2" style="display: none;">
+                        <ul class="bloglist">
+                            <li>
+                                <a href="#"><h1>标题5</h1></a>
+                                <p>介绍5</p>
+                            </li>
+                            <li>
+                                <a href="#"><h1>标题6</h1></a>
+                                <p>介绍6</p>
+                            </li>
+                            <li>
+                                <a href="#"><h1>标题7</h1></a>
+                                <p>介绍7</p>
+                            </li>
+                            <li>
+                                <a href="#"><h1>标题8</h1></a>
+                                <p>介绍8</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -157,8 +147,7 @@
                             </span>
                             <h3>微信</h3>
                             <span class="wx-ewm">
-                                <img src="https://gitee.com/daierg/picbed/raw/master/uPic/wx-ewm.png"
-                                    alt="">
+                                <img src="https://gitee.com/daierg/picbed/raw/master/uPic/wx-ewm.png" alt="">
                                 Ohh-Welltodo
                             </span>
                         </div>
@@ -209,16 +198,15 @@
         </footer>
 
     </div>
+    <!-- jQuery -->
+    <script src="//daierg.github.io/js/jquery.min.js"></script>
+    <script src="//daierg.github.io/js/jquery.scrolly.min.js"></script>
+    <script src="//daierg.github.io/js/jquery.scrollex.min.js"></script>
+    <script src="//daierg.github.io/js/skel.min.js"></script>
+    <script src="//daierg.github.io/js/util.js"></script>
 
-        <!-- jQuery -->
-        <script src="//daierg.github.io/js/jquery.min.js"></script>
-        <script src="//daierg.github.io/js/jquery.scrolly.min.js"></script>
-        <script src="//daierg.github.io/js/jquery.scrollex.min.js"></script>
-        <script src="//daierg.github.io/js/skel.min.js"></script>
-        <script src="//daierg.github.io/js/util.js"></script>
-    
-        <!-- Main JS -->
-        <script src="//daierg.github.io/js/main.js"></script>
+    <!-- Main JS -->
+    <script src="//daierg.github.io/js/main.js"></script>
 </body>
 
 </html>
